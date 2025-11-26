@@ -18,10 +18,33 @@ jobs:
           sudo mv conftest /usr/local/bin
 
       - name: Run Conftest on Kubernetes policies
-        run: conftest test ./01-eks-gatekeeper/policies/
+        run: conftest test 01-eks-gatekeeper/policies/
 
       - name: Run Conftest on Terraform
-        run: conftest test ./02-conftest-terraform/terraform/
+        run: conftest test 02-conftest-terraform/terraform/
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+ 
+
+
+
+
 
 
 

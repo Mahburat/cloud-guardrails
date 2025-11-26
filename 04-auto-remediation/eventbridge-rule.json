@@ -1,0 +1,14 @@
+{
+  "Name": "S3-Public-Block-Event",
+  "EventPattern": {
+    "source": ["aws.config"],
+    "detail-type": ["Config Rules Compliance Change"],
+    "detail": {
+      "configRuleName": ["s3-bucket-public-read-prohibited"],
+      "newEvaluationResult": {
+        "complianceType": ["NON_COMPLIANT"]
+      }
+    }
+  },
+  "State": "ENABLED"
+}

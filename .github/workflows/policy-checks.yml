@@ -17,14 +17,18 @@ jobs:
           tar -xzf conftest_0.52.0_Linux_x86_64.tar.gz
           sudo mv conftest /usr/local/bin
 
+      # 1) Gatekeeper YAML’дарын текшерүү
       - name: Run Conftest on Gatekeeper YAML (expect failure)
         continue-on-error: true
-        run: conftest test 01-eks-gatekeeper/policies/
+        run: |
+          conftest test 01-eks-gatekeeper/tests/ \
+            --policy 01-eks-gatekeeper/policies
 
+      # 2) Terraform tfplan.json’ду текшерүү
       - name: Run Conftest on Terraform Rego
-        run: conftest test ./02-conftest-terraform/policies/
-
-
+        run: |
+          conftest test 02-conftest-terraform/terraform/tfplan.json \
+            --policy 02-conftest-terraform/policies
 
 
 

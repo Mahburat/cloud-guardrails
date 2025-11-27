@@ -1,3 +1,6 @@
+## Repository Layout
+
+```
 cloud-guardrails/
 ├── README.md
 ├── 01-eks-gatekeeper/
@@ -38,3 +41,4 @@ cloud-guardrails/
 └── .github/
     └── workflows/
         └── policy-checks.yml
+```

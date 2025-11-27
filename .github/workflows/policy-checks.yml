@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Conftest on Gatekeeper YAML (expect failure)
         continue-on-error: true
-        run: conftest test ./01-eks-gatekeeper/policies/*.yaml
+        run: conftest test 01-eks-gatekeeper/policies/
 
       - name: Run Conftest on Terraform Rego
         run: conftest test ./02-conftest-terraform/policies/
